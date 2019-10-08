@@ -32,6 +32,27 @@ class Actions(object):
             self.exchange_block([1, 0, i], [4, i, 2], [3, 2, 2 - i], [0, 2 - i, 0])
         self.clockwise(5)
 
+    def x_rotate(self):
+        for i in range(3):
+            for j in range(3):
+                self.exchange_block([2, i, j], [3, i, j], [5, 2 - i, 2 - j], [1, i, j])
+            self.clockwise(0)
+        self.clockwise(4)
+
+    def y_rotate(self):
+        for i in range(3):
+            for j in range(3):
+                self.exchange_block([2, i, j], [4, i, j], [5, i, j], [0, i, j])
+            self.clockwise(3)
+        self.clockwise(1)
+
+    def z_rotate(self):
+        for i in range(3):
+            for j in range(3):
+                self.exchange_block([1, i, j], [0, 2 - j, i], [3, 2 - i, 2 - j], [4, j, 2 - i])
+            self.clockwise(5)
+        self.clockwise(2)
+
     def clockwise(self, z):
         self.exchange_block([z, 0, 0], [z, 2, 0], [z, 2, 2], [z, 0, 2])
         self.exchange_block([z, 0, 1], [z, 1, 0], [z, 2, 1], [z, 1, 2])

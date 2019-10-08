@@ -99,6 +99,12 @@ i = R<br>
 k = R'<br>
 j = U<br>
 l = U'<br>
+z = x<br>
+x = y<br>
+c = z<br>
+b = x'<br>
+n = y'<br>
+m = z'<br>
 r = 魔方复位<br>
 左边表示键盘按键，右边表示魔方旋转方式<br>
 不带引号表示字母面顺时针旋转，带引号表示字母面逆时针旋转<br>
@@ -107,6 +113,8 @@ r = 魔方复位<br>
 <img src="http://m.qpic.cn/psb?/V12HtLmb1YIcpa/Z0sBnEZQ23KfX9dteyXd2PIYZfALDrsYah0MhCC.CPA!/b/dFIBAAAAAAAA&bo=ngJ0AgAAAAARF8o!&rf=viewer_4" width="502" height="471"></img><br>
 按键图：<br>
 <img src="http://m.qpic.cn/psb?/V12HtLmb1YIcpa/A.iB9D0ON1ISLg6sm4xVGB56ni0*0JcA.CdLRl3LWUk!/b/dFMBAAAAAAAA&bo=wwEJAQAAAAARF.o!&rf=viewer_4" width="451" height="265"></img><br>
+<br>
+<img src="http://m.qpic.cn/psb?/V12HtLmb1YIcpa/LIKOenZh3wEiwp1*4C770FDZCmx8GWyiW51BSstCjr0!/b/dL8AAAAAAAAA&bo=cAGJAAAAAAARB8g!&rf=viewer_4" width="368" height="137"></img><br>
 ### 一些图案
 #### 为了方便操作，字母表示键盘按键
 六面回字公式：L D G F S K L D<br>

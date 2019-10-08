@@ -26,6 +26,12 @@ class Functions(object):
                     self.actions.front_rotate()
                 elif event.key == pygame.K_f:
                     self.actions.back_rotate()
+                elif event.key == pygame.K_z:
+                    self.actions.x_rotate()
+                elif event.key == pygame.K_x:
+                    self.actions.y_rotate()
+                elif event.key == pygame.K_c:
+                    self.actions.z_rotate()
                 elif event.key == pygame.K_l:
                     for i in range(3):
                         self.actions.up_rotate()
@@ -44,6 +50,15 @@ class Functions(object):
                 elif event.key == pygame.K_h:
                     for i in range(3):
                         self.actions.back_rotate()
+                elif event.key == pygame.K_b:
+                    for i in range(3):
+                        self.actions.x_rotate()
+                elif event.key == pygame.K_n:
+                    for i in range(3):
+                        self.actions.y_rotate()
+                elif event.key == pygame.K_m:
+                    for i in range(3):
+                        self.actions.z_rotate()
                 elif event.key == pygame.K_r:
                     self.cube.block.clear()
                     self.cube.create_cube()
