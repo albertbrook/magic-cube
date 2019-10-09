@@ -59,7 +59,7 @@ class Functions(object):
                 elif event.key == pygame.K_m:
                     for i in range(3):
                         self.actions.z_rotate()
-                elif event.key == pygame.K_r:
+                elif event.key == pygame.K_0:
                     self.cube.block.clear()
                     self.cube.create_cube()
 
