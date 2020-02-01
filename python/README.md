@@ -13,7 +13,7 @@
 <br>
 最后直接从平面考虑，给每个面标上数字z，x表示行数，y表示列数<br>
 如图所示：<br>
-<img src="http://m.qpic.cn/psb?/V12HtLmb1YIcpa/E4nlaBm7HLiKD0uoiKrtsUJbFTFHKD5P3CJzZjdTlsQ!/b/dL4AAAAAAAAA&bo=JANpAgAAAAARF2w!&rf=viewer_4" width="402" height="308"></img><br>
+![](../images/demo1.jpg)<br>
 比如[2, 0, 1]表示红色面靠黄色面的中间那块<br>
 这样的数据结构只要用一个三维数组就可以表示了，而且映射到平面也变简单了<br>
 ```
@@ -110,11 +110,11 @@ m = z'<br>
 不带引号表示字母面顺时针旋转，带引号表示字母面逆时针旋转<br>
 如R表示右面顺时针旋转90°，R'表示右面逆时针旋转90°（你要喜欢也可以当作顺时针旋转-90°）<br>
 魔方旋转方式图：<br>
-<img src="http://m.qpic.cn/psb?/V12HtLmb1YIcpa/Z0sBnEZQ23KfX9dteyXd2PIYZfALDrsYah0MhCC.CPA!/b/dFIBAAAAAAAA&bo=ngJ0AgAAAAARF8o!&rf=viewer_4" width="502" height="471"></img><br>
+![](../images/demo2.jpg)<br>
 按键图：<br>
-<img src="http://m.qpic.cn/psb?/V12HtLmb1YIcpa/A.iB9D0ON1ISLg6sm4xVGB56ni0*0JcA.CdLRl3LWUk!/b/dFMBAAAAAAAA&bo=wwEJAQAAAAARF.o!&rf=viewer_4" width="451" height="265"></img><br>
+![](../images/demo3.jpg)<br>
 <br>
-<img src="http://m.qpic.cn/psb?/V12HtLmb1YIcpa/LIKOenZh3wEiwp1*4C770FDZCmx8GWyiW51BSstCjr0!/b/dL8AAAAAAAAA&bo=cAGJAAAAAAARB8g!&rf=viewer_4" width="368" height="137"></img><br>
+![](../images/demo4.jpg)<br>
 ### 一些图案
 #### 为了方便操作，字母表示键盘按键
 六面回字公式：L D G F S K L D<br>
