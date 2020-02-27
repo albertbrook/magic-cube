@@ -24,6 +24,7 @@ b = x'<br>
 n = y'<br>
 m = z'<br>
 0 = 魔方复位<br>
+魔方旋转方式图：<br>
 ![](../images/demo2.jpg)<br>
 按键图：<br>
 ![](../images/demo3.jpg)<br>
