@@ -6,15 +6,19 @@ namespace MagicCube
     public class Program : Form
     {
         private readonly IContainer components = null;
+        private readonly PictureBox pictureBox = new PictureBox();
 
         private Program()
         {
-            this.Text = "Magic Cube - AlbertBrook";
-            this.ClientSize = Settings.ScreenSize;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.BackColor = Settings.ScreenColor;
+            Text = "Magic Cube - AlbertBrook";
+            ClientSize = Settings.ScreenSize;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            StartPosition = FormStartPosition.CenterScreen;
+            BackColor = Settings.ScreenColor;
+
+            pictureBox.Size = Settings.ScreenSize;
+            Controls.Add(pictureBox);
 
             Functions.GetFunctions(this);
         }
@@ -31,6 +35,11 @@ namespace MagicCube
                 components.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        internal PictureBox GetPictureBox()
+        {
+            return pictureBox;
         }
     }
 }
