@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace MagicCube
@@ -12,7 +11,7 @@ namespace MagicCube
         private readonly Cube cube;
         private readonly Actions actions;
 
-        private readonly Graphics g;
+        private readonly PictureBox pic;
 
         private Functions(Program program)
         {
@@ -20,8 +19,8 @@ namespace MagicCube
             cube = Cube.GetCube();
             actions = Actions.GetActions();
 
-            g = this.program.CreateGraphics();
-            this.program.Shown += new EventHandler(Show);
+            pic = this.program.GetPictureBox();
+            Paint();
             this.program.KeyDown += new KeyEventHandler(Event);
         }
 
@@ -34,19 +33,22 @@ namespace MagicCube
 
         private void Paint()
         {
+            Bitmap bitmap = new Bitmap(Settings.ScreenSize.Width, Settings.ScreenSize.Height);
+            Graphics g = Graphics.FromImage(bitmap);
             int z = 0;
             for (int i = 0; i < 12; i += 3)
                 for (int j = 0; j < 9; j += 3)
                 {
                     if (i == 3 || j == 3)
                     {
-                        DrawPlane(i, j);
-                        FillPlane(i, j, z++);
+                        DrawPlane(g, i, j);
+                        FillPlane(g, i, j, z++);
                     }
                 }
+            pic.Image = bitmap;
         }
 
-        private void DrawPlane(int i, int j)
+        private void DrawPlane(Graphics g, int i, int j)
         {
             int location = Settings.LineSize / 2 + Settings.BlockSize;
             int size = Settings.LineSize + Settings.BlockSize;
@@ -56,7 +58,7 @@ namespace MagicCube
                     g.DrawRectangle(p, location + (i + x) * size, location + (j + y) * size, size, size);
         }
 
-        private void FillPlane(int i, int j, int z)
+        private void FillPlane(Graphics g, int i, int j, int z)
         {
             int size = Settings.LineSize + Settings.BlockSize;
             for (int x = 0; x < 3; x++)
@@ -65,11 +67,6 @@ namespace MagicCube
                     SolidBrush b = new SolidBrush(cube.GetBlock()[z, x, y]);
                     g.FillRectangle(b, (i + y + 1) * size, (j + x + 1) * size, Settings.BlockSize, Settings.BlockSize);
                 }
-        }
-
-        private void Show(object sender, EventArgs e)
-        {
-            Paint();
         }
 
         private void Event(object sender, KeyEventArgs e)
