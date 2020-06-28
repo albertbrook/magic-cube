@@ -17,7 +17,9 @@ csc /out:MagicCube.exe *.cs
 ```
 ### javascript
 ```
-访问index.html
+本地访问index.html
+或者
+https://albertbrook.github.io/magic-cube/
 ```
 ![](images/demo.jpg)
 ## 操作
