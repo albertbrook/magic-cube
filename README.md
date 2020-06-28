@@ -1,5 +1,5 @@
 ﻿# 魔方模拟器
-分别使用python和java实现
+使用多种语言实现的平面魔方模拟器
 ## 运行
 ### python
 ```
@@ -14,6 +14,10 @@ java Main
 ### c#
 ```
 csc /out:MagicCube.exe *.cs
+```
+### javascript
+```
+访问index.html
 ```
 ![](images/demo.jpg)
 ## 操作
